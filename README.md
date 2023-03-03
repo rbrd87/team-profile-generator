@@ -93,8 +93,7 @@ You can find the generated HTML page in the 'output' folder.
 
 Please see the below video for reference:
 
-
-Or view [here](https://drive.google.com/file/d/10ffb3tbY55JTXc9k_Hp66l9OyWGU7mG7/view?usp=share_link)
+https://drive.google.com/file/d/10ffb3tbY55JTXc9k_Hp66l9OyWGU7mG7/view?usp=share_link
   
 ## Tests
 This project uses Jest to run a series of tests to ensure all classes are working correctly. If making any changes please run the tests to ensure that they're still passing as expected. See below image for reference:
