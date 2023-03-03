@@ -115,14 +115,13 @@ nextEmployee = () => {
 }
 
 // Functions to store the question answers and push to the employees array
-
 // askManagerQuestions is called first with the relevant questions
 askManagerQuestions = () => {
     inquirer
         .prompt([
-            nameQuestion, 
-            idQuestion, 
-            emailQuestion, 
+            nameQuestion,
+            idQuestion,
+            emailQuestion,
             officeQuestion
         ])
         .then((response) => {
@@ -164,9 +163,9 @@ askEngineerQuestions = () => {
 askInternQuestions = () => {
     inquirer
         .prompt([
-            nameQuestion, 
-            idQuestion, 
-            emailQuestion, 
+            nameQuestion,
+            idQuestion,
+            emailQuestion,
             schoolQuestion
         ])
         .then((response) => {
@@ -182,11 +181,20 @@ askInternQuestions = () => {
         });
 };
 
-// Function to write html file to the correct directory
+// A function to check that the OUTPUT_DIR exists - we will pass this into the writeToFile function
+// If the directory doesn't exist it will create it
+const directoryCheck = (directory) => {
+    if (!fs.existsSync(directory)) {
+        fs.mkdirSync(directory);
+    }
+};
+
+// This function firstly checks the OUTPUT_DIR passed from the nextEmployee function - creates the directory if needed
+// It will then render an HTML file using the employee array as the data
 const writeToFile = (fileName, directory, data) => {
-    fs.writeFile(fileName, directory, data, (error) =>
-        (error ? console.log(error) : console.log("Success!"))
-    );
+    directoryCheck(directory);
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.error(err) : console.log("Success!"));
 }
 
 // Function to initialize program using arrow function

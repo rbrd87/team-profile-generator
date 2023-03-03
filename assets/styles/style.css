@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+/* A list of variable for values repeadted several times */
+:root {
+    --plum: #46042a;
+    --gold: #8b6512;
+    --white: #fff;
+    --grey: #c0c0c0;
+    --background-color: #46042bea;
+}
+
+/* Set the site font to Euclid Circular A */
+body {
+    font-family: 'Euclid Circular A', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.team-heading {
+    background-image: linear-gradient(0deg, var(--background-color), var(--background-color)), url(../images/patternpad.svg);
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    height: 15vh;
+    border-radius: 0;
+}
+
+.card {
+    min-width: 300px;
+}
+
+.card-header {
+    text-align: center;
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+.card-body {
+    background-color: var(--plum);
+}
+
+.list-group-item {
+    color: var(--white);
+    font-weight: 500;
+    background-color: transparent;
+}
+
+.role-icon {
+    padding-right: 10px;
+}
+
+li a {
+    font-weight: 400;
+    color: var(--grey);
+}
+
+li a:hover {
+    color: var(--grey)
+}
