@@ -1,19 +1,22 @@
+// Packages needed to run the command line application
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
+// Pulling in the classes from the lib folder
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
+// Using path to create a directory and create a html page
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
+// Rendering the html page using the page-template provided
 const render = require("./src/page-template.js");
 
 // Empty array to store the employees
 const employees = [];
-console.log(employees);
 
 // Gathering information about the development team members, and rendering the HTML file.
 const nameQuestion = {
@@ -45,7 +48,6 @@ const emailQuestion = {
     message: "What is your email address?",
     name: "email",
     validate(email) {
-        //simple validation, as emails are super complicated to validate
         if (!/[@]/.test(email) || !/[.]/.test(email)) {
             return "Please enter a valid email address";
         }
@@ -132,7 +134,7 @@ askManagerQuestions = () => {
                 response.office
             );
             employees.push(newManager);
-            console.log(employees);
+            console.log("=====================")
             nextEmployee(); // We then call the nextEmployee function last, to ask the user if they want to add further employees
         });
 };
@@ -154,7 +156,7 @@ askEngineerQuestions = () => {
                 response.github
             );
             employees.push(newEngineer);
-            console.log(employees);
+            console.log("=====================")
             nextEmployee();
         });
 };
@@ -176,7 +178,7 @@ askInternQuestions = () => {
                 response.school
             );
             employees.push(newIntern);
-            console.log(employees);
+            console.log("=====================")
             nextEmployee();
         });
 };
