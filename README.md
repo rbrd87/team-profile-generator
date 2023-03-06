@@ -6,7 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Description](#description)
     - [User Story](#user-story)
-    - [](#)
+    - [Acceptance Criteria](#acceptance-criteria)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Tests](#tests)
@@ -20,7 +20,7 @@ AS A manager
 I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 ```
-###
+### Acceptance Criteria
 - Create a command-line application that accepts user input using the provided starter code.
 - Create classes for each team member provided and export them. The tests for these classes, which are located in the `_tests_` directory, must ALL pass.
 - The first class is an `Employee` parent class with the following properties and methods:
